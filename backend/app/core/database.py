@@ -4,7 +4,7 @@ from sqlalchemy.orm import DeclarativeBase, sessionmaker
 from app.core.config import settings
 
 engine = create_engine(
-    settings.database_url,
+    settings.sqlite_url,
     connect_args={"check_same_thread": False},  # required for SQLite
 )
 
@@ -12,6 +12,10 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
 class Base(DeclarativeBase):
+    pass
+
+
+class HistoryBase(DeclarativeBase):
     pass
 
 

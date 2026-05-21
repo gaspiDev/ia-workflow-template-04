@@ -2,11 +2,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
-from app.core.database import Base, engine
+from app.core.database import Base, engine, HistoryBase
 from app.core.middleware import LoggingMiddleware
 from app.routers import pais as pais_router
+from app.routers import chat_message as chat_router
 
-Base.metadata.create_all(bind=engine)
+HistoryBase.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title=settings.app_name,
@@ -25,6 +26,7 @@ app.add_middleware(
 )
 
 app.include_router(pais_router.router, prefix="/api/v1")
+app.include_router(chat_router.router, prefix="/api/v1")
 
 
 @app.get("/health")

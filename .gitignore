@@ -19,3 +19,6 @@ Thumbs.db
 
 # Screenshots / agent outputs (local artifacts)
 screenshots/
+
+# Gemini
+.gemini/

@@ -7,10 +7,10 @@ type: feature
 priority: high
 complexity: medium
 phase: 3
-status: todo
+status: done
 labels: [frontend, api]
 epic_branch: epic/PRD-001-alto-shopping-chatbot
-plan: null
+plan: .agents/plans/PRD-001-alto-shopping-chatbot/STORY-007-implement-history-persistence.plan.md
 report: null
 commit: null
 depends_on: [STORY-003, STORY-005, STORY-006]

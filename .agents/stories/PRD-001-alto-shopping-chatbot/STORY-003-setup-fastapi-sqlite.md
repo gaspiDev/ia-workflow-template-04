@@ -7,7 +7,7 @@ type: technical
 priority: high
 complexity: medium
 phase: 1
-status: in-progress
+status: done
 labels: [backend, api]
 epic_branch: epic/PRD-001-alto-shopping-chatbot
 plan: .agents/plans/PRD-001-alto-shopping-chatbot/STORY-003-setup-fastapi-sqlite.plan.md

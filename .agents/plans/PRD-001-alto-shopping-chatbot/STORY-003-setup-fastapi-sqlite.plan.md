@@ -6,6 +6,7 @@ title: Setup FastAPI Backend with SQLite for Chat History
 type: technical
 priority: high
 complexity: medium
+status: done
 epic_branch: epic/PRD-001-alto-shopping-chatbot
 created: 2026-05-20
 ---
@@ -64,7 +65,7 @@ Since we have both PostgreSQL and SQLite, I will ensure `app/core/database.py` h
 | `backend/app/schemas/chat_message.py` | CREATE | Pydantic schemas for chat messages. |
 | `backend/app/repositories/chat_message.py` | CREATE | DB operations for chat messages. |
 | `backend/app/services/chat_message.py` | CREATE | Business logic for chat history. |
-| `backend/app/routers/chat_message.py` | CREATE | API endpoints for chat history. |
+| `backend/app/routers/chat_message.py" | CREATE | API endpoints for chat history. |
 | `backend/app/main.py` | UPDATE | Register the new chat history router. |
 
 ---
@@ -72,55 +73,55 @@ Since we have both PostgreSQL and SQLite, I will ensure `app/core/database.py` h
 ## Tasks
 
 ### Task 1: Update Database Configuration
-- **File**: `backend/app/core/database.py`
-- **Action**: UPDATE
-- **Implement**: Ensure `engine` uses `settings.sqlite_url`.
-- **Validate**: Check that `history.db` is created upon app startup.
+- [x] **File**: `backend/app/core/database.py`
+- [x] **Action**: UPDATE
+- [x] **Implement**: Ensure `engine` uses `settings.sqlite_url`.
+- [x] **Validate**: Check that `history.db` is created upon app startup.
 
 ### Task 2: Create Chat Message Model
-- **File**: `backend/app/models/chat_message.py`
-- **Action**: CREATE
-- **Implement**: 
+- [x] **File**: `backend/app/models/chat_message.py`
+- [x] **Action**: CREATE
+- [x] **Implement**: 
     - `id`: int (PK)
     - `role`: str (e.g., "user", "assistant")
     - `content`: str
     - `timestamp`: datetime (default=now)
-- **Validate**: Import in `app/models/__init__.py`.
+- [x] **Validate**: Import in `app/models/__init__.py`.
 
 ### Task 3: Create Chat Message Schema
-- **File**: `backend/app/schemas/chat_message.py`
-- **Action**: CREATE
-- **Implement**: `ChatMessageBase`, `ChatMessageCreate`, `ChatMessage`.
+- [x] **File**: `backend/app/schemas/chat_message.py`
+- [x] **Action**: CREATE
+- [x] **Implement**: `ChatMessageBase`, `ChatMessageCreate`, `ChatMessage`.
 
 ### Task 4: Create Chat Message Repository
-- **File**: `backend/app/repositories/chat_message.py`
-- **Action**: CREATE
-- **Implement**: `get_all()`, `create()`, `delete_all()`.
+- [x] **File**: `backend/app/repositories/chat_message.py`
+- [x] **Action**: CREATE
+- [x] **Implement**: `get_all()`, `create()`, `delete_all()`.
 
 ### Task 5: Create Chat Message Service
-- **File**: `backend/app/services/chat_message.py`
-- **Action**: CREATE
-- **Implement**: `get_history()`, `clear_history()`.
+- [x] **File**: `backend/app/services/chat_message.py`
+- [x] **Action**: CREATE
+- [x] **Implement**: `get_history()`, `clear_history()`.
 
 ### Task 6: Create Chat Message Router
-- **File**: `backend/app/routers/chat_message.py`
-- **Action**: CREATE
-- **Implement**: 
+- [x] **File**: `backend/app/routers/chat_message.py`
+- [x] **Action**: CREATE
+- [x] **Implement**: 
     - `GET /chat/history`
     - `DELETE /chat/history`
-- **Validate**: Ensure they use the service layer.
+- [x] **Validate**: Ensure they use the service layer.
 
 ### Task 7: Register Router in Main
-- **File**: `backend/app/main.py`
-- **Action**: UPDATE
-- **Implement**: `app.include_router(chat_message.router, prefix="/api/v1")`.
+- [x] **File**: `backend/app/main.py`
+- [x] **Action**: UPDATE
+- [x] **Implement**: `app.include_router(chat_message.router, prefix="/api/v1")`.
 
 ---
 
 ## End-to-End Tests
-- [ ] Run the backend.
-- [ ] Call `DELETE /api/v1/chat/history` (should return 204 or 200).
-- [ ] Call `GET /api/v1/chat/history` (should return empty list `[]`).
+- [x] Run the backend.
+- [x] Call `DELETE /api/v1/chat/history` (should return 204 or 200).
+- [x] Call `GET /api/v1/chat/history` (should return empty list `[]`).
 - [ ] (Future) Verify messages are saved when the AI agent is integrated.
 
 ---
@@ -138,7 +139,7 @@ curl http://localhost:8000/api/v1/chat/history
 ---
 
 ## Acceptance Criteria
-- [ ] Given the FastAPI app, when I call `GET /chat/history`, then I receive a list of previous messages from SQLite.
-- [ ] Given the FastAPI app, when I call `DELETE /chat/history`, then the SQLite history is cleared.
-- [ ] Given a running app, when I check the SQLite database, then it contains a `messages` table with `role` and `content`.
-- [ ] All tasks completed.
+- [x] Given the FastAPI app, when I call `GET /chat/history`, then I receive a list of previous messages from SQLite.
+- [x] Given the FastAPI app, when I call `DELETE /chat/history`, then the SQLite history is cleared.
+- [x] Given a running app, when I check the SQLite database, then it contains a `messages` table with `role` and `content`.
+- [x] All tasks completed.
