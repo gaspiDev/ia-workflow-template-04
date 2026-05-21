@@ -7,10 +7,10 @@ type: technical
 priority: high
 complexity: small
 phase: 1
-status: todo
+status: done
 labels: [backend, database]
 epic_branch: epic/PRD-001-alto-shopping-chatbot
-plan: null
+plan: .agents/plans/PRD-001-alto-shopping-chatbot/STORY-002-database-seeding.plan.md
 report: null
 commit: null
 depends_on: [STORY-001]

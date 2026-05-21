@@ -113,6 +113,8 @@ Un template full-stack deliberadamente simple que sirve de canvas para el flujo 
 cd backend
 pip install -r requirements.txt
 cp .env.example .env
+# Optional: Seed the database with sample data
+python scripts/seed_db.py
 uvicorn app.main:app --reload    # http://localhost:8000
 
 # Frontend (en otra terminal)
