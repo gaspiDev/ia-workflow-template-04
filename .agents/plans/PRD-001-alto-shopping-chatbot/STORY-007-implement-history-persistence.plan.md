@@ -92,12 +92,10 @@ As a user, I want my chat history to be saved and loaded automatically, so that 
     - Update `handleClear` to call `api.clearHistory()`.
     - Reset local state after successful deletion.
 
-### Task 4: Prepare Query Integration (Partial)
+### Task 4: Query Integration
 - [x] **File**: `frontend/src/pages/Chat.jsx`
 - [x] **Action**: UPDATE
-- [x] **Implement**: 
-    - Prepare `handleSend` to eventually use `api.sendQuery()`.
-    - For now, keep mock response but ensure the user message is saved (if endpoint supports it).
+- [x] **Implement**: Connect `handleSend` to the real `/chat/query` endpoint via `api.sendQuery()`.
 
 ---
 

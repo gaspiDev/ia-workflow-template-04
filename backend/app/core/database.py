@@ -10,6 +10,12 @@ engine = create_engine(
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
+# PostgreSQL Engine for Analytical Data
+postgres_engine = create_engine(settings.postgres_url)
+PostgresSessionLocal = sessionmaker(
+    autocommit=False, autoflush=False, bind=postgres_engine
+)
+
 
 class Base(DeclarativeBase):
     pass
@@ -21,6 +27,14 @@ class HistoryBase(DeclarativeBase):
 
 def get_db():
     db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+
+def get_postgres_db():
+    db = PostgresSessionLocal()
     try:
         yield db
     finally:

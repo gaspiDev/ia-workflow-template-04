@@ -16,3 +16,12 @@ class ChatMessage(ChatMessageBase):
     timestamp: datetime
 
     model_config = ConfigDict(from_attributes=True)
+
+
+class QueryRequest(BaseModel):
+    query: str
+
+
+class QueryResponse(BaseModel):
+    answer: str
+    history: list[ChatMessage]

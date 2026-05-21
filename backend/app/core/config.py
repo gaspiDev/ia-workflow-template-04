@@ -9,6 +9,8 @@ class Settings(BaseSettings):
     database_url: str = "sqlite:///./app.db"
     postgres_url: str = "postgresql://gsp2k:secreto@localhost:5432/alto-shopping"
     sqlite_url: str = "sqlite:///./history.db"
+    openrouter_api_key: str = ""
+    model_name: str = "deepseek/deepseek-r1:free"
     allowed_origins: str = "http://localhost:3000"
     log_level: str = "INFO"
 

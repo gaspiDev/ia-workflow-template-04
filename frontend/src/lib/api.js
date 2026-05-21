@@ -23,12 +23,19 @@ export async function clearHistory() {
  * This function will eventually call POST /chat/query
  */
 export async function sendQuery(query) {
-  // Simulate network delay
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  
-  // For now, return a mock response
-  return {
-    role: "assistant",
-    content: `I received your message: "${query}". I'm currently in 'UI mode'. Once the backend is ready, I'll be able to answer questions about shops, sales, and more!`
-  };
+  const response = await fetch(`${API_BASE_URL}/chat/query`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ query }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to send query");
+  }
+
+  const data = await response.json();
+  return { role: "assistant", content: data.answer };
 }
+

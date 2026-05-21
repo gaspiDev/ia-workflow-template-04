@@ -7,10 +7,10 @@ type: feature
 priority: high
 complexity: large
 phase: 2
-status: todo
+status: done
 labels: [backend, ai]
 epic_branch: epic/PRD-001-alto-shopping-chatbot
-plan: null
+plan: .agents/plans/PRD-001-alto-shopping-chatbot/STORY-004-implement-ai-agent-tools.plan.md
 report: null
 commit: null
 depends_on: [STORY-001, STORY-002]

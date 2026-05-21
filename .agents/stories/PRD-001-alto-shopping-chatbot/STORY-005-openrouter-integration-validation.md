@@ -7,10 +7,10 @@ type: feature
 priority: high
 complexity: medium
 phase: 2
-status: todo
+status: done
 labels: [backend, ai, security]
 epic_branch: epic/PRD-001-alto-shopping-chatbot
-plan: null
+plan: .agents/plans/PRD-001-alto-shopping-chatbot/STORY-005-openrouter-integration-validation.plan.md
 report: null
 commit: null
 depends_on: [STORY-003, STORY-004]
