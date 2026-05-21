@@ -7,6 +7,8 @@ class Settings(BaseSettings):
     app_version: str = "0.1.0"
     debug: bool = False
     database_url: str = "sqlite:///./app.db"
+    postgres_url: str = "postgresql://gsp2k:secreto@localhost:5432/alto-shopping"
+    sqlite_url: str = "sqlite:///./history.db"
     allowed_origins: str = "http://localhost:3000"
     log_level: str = "INFO"
 

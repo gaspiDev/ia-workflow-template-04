@@ -7,7 +7,7 @@ type: technical
 priority: high
 complexity: small
 phase: 1
-status: in-progress
+status: done
 labels: [backend, database]
 epic_branch: epic/PRD-001-alto-shopping-chatbot
 plan: .agents/plans/PRD-001-alto-shopping-chatbot/STORY-001-setup-postgresql-schema.plan.md
