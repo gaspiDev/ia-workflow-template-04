@@ -16,7 +16,7 @@ All stories commit on the epic branch `epic/PRD-001-alto-shopping-chatbot`. No p
 |----|-------|------|--------|------------|------|--------|
 | STORY-001 | Setup PostgreSQL Schema and Alembic Migrations | technical | ✅ done | small | [plan](../../plans/PRD-001-alto-shopping-chatbot/STORY-001-setup-postgresql-schema.plan.md) | — |
 | STORY-002 | Implement Database Seeding for Alto Shopping | technical | ✅ done | small | [plan](../../plans/PRD-001-alto-shopping-chatbot/STORY-002-database-seeding.plan.md) | — |
-| STORY-003 | Setup FastAPI Backend with SQLite for Chat History | technical | ⬜ todo | medium | — | — |
+| STORY-003 | Setup FastAPI Backend with SQLite for Chat History | technical | 🟡 in-progress | medium | [plan](../../plans/PRD-001-alto-shopping-chatbot/STORY-003-setup-fastapi-sqlite.plan.md) | — |
 | STORY-004 | Implement Pydantic-AI Agent with Read-Only Tools | feature | ⬜ todo | large | — | — |
 | STORY-005 | Integrate OpenRouter and Implement SELECT Query Validation | feature | ⬜ todo | medium | — | — |
 | STORY-006 | Build React Chat Interface with Purple/White Palette | feature | ✅ done | medium | [plan](../../plans/PRD-001-alto-shopping-chatbot/STORY-006-build-chat-ui.plan.md) | — |
