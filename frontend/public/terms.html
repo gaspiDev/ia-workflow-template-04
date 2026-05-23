@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Agentic DB Explorer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fdfaf6;
+        }
+        h1 {
+            color: #d94e33;
+            border-bottom: 2px solid #d94e33;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #4a4a4a;
+            margin-top: 30px;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+        .actions {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #d94e33;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: opacity 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .disclaimer {
+            background-color: #fff4f2;
+            border-left: 4px solid #d94e33;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Terms and Conditions</h1>
+        <p>Welcome to Agentic DB Explorer. Please read these terms carefully before using our services.</p>
+
+        <h2>1. Example Database Usage</h2>
+        <p>The "Alto Shopping" example database is provided for demonstration purposes. Please be aware that:</p>
+        <ul>
+            <li>AI-driven queries are processed via <strong>OpenRouter</strong>.</li>
+            <li>There is a <strong>daily limit</strong> on the number of queries that can be processed.</li>
+            <li>Service availability may be affected once this limit is reached.</li>
+        </ul>
+
+        <h2>2. Security and Connection Strings</h2>
+        <div class="disclaimer">
+            <strong>Security Disclaimer:</strong> If you choose to provide your own database connection string to explore your data, we treat this information with the utmost caution.
+        </div>
+        <p>We do not store your connection strings permanently in our primary database unless explicitly requested for history persistence. They are used solely to establish a session-based connection to your data source. However, we recommend using read-only credentials with restricted permissions for maximum safety.</p>
+
+        <h2>3. Responsibility</h2>
+        <p>Users are responsible for the queries they execute. This tool provides direct access to database execution layers through an AI agent. Always verify the agent's proposed queries before execution if possible.</p>
+
+        <div class="actions">
+            <button class="btn" onclick="window.print()">Download / Print PDF</button>
+            <a href="/" class="btn" style="background-color: #666;">Back to App</a>
+        </div>
+    </div>
+</body>
+</html>

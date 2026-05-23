@@ -70,7 +70,7 @@ def execute_select(ctx: RunContext[AltoAgentDeps], query: str) -> list[dict] | s
         return "Error: Only SELECT queries are allowed for security reasons."
     
     # Additional check to prevent multiple statements or dangerous keywords
-    if ";" in clean_query or any(k in clean_query.upper() for k in ["DROP", "DELETE", "UPDATE", "INSERT", "TRUNCATE"]):
+    if clean_query.count(";") > 1 or (";" in clean_query and not clean_query.endswith(";")) or any(k in clean_query.upper() for k in ["DROP", "DELETE", "UPDATE", "INSERT", "TRUNCATE"]):
         return "Error: Forbidden keywords or multiple statements detected."
 
     try:

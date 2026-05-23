@@ -8,10 +8,11 @@ sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
 from app.core.database import PostgresSessionLocal
 from app.agents.alto_agent import alto_agent, AltoAgentDeps
+from app.core.config import settings
 
 async def test_live_agent():
     print("--- Testing Live Agent with OpenRouter ---")
-    print(f"Using Model: {os.getenv('MODEL_NAME', 'deepseek/deepseek-r1:free')}")
+    print(f"Using Model: {settings.model_name}")
     
     question = "How many shops are there in the mall?"
     print(f"Question: {question}")
