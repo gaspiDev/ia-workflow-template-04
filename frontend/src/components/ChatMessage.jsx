@@ -1,6 +1,7 @@
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { cn } from "@/lib/utils"
 import { Sparkles, User } from "lucide-react"
+import MarkdownRenderer from "./MarkdownRenderer"
 
 export default function ChatMessage({ role, content }) {
   const isAssistant = role === "assistant"
@@ -27,7 +28,7 @@ export default function ChatMessage({ role, content }) {
             : "bg-primary text-primary-foreground rounded-br-none shadow-xl hover:translate-y-[-2px] mr-4"
         )}
       >
-        <div className="whitespace-pre-wrap">{content}</div>
+        <MarkdownRenderer>{content}</MarkdownRenderer>
       </div>
     </div>
   )
